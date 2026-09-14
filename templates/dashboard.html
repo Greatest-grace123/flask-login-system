@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <nav class="dashboard-nav">
+    <strong>My App</strong>
+
+    <a href="{{ url_for('logout') }}">Logout</a>
+</nav>
+
+<h1>My Dashboard</h1>
+
+<p class="welcome">
+    Welcome, {{ username }}! 👋
+</p>
+
+        <p>You are successfully logged in.</p>
+         <div class="profile-card">
+
+    <h2>My Account</h2>
+
+    <p>Username: <strong>{{ username }}</strong></p>
+
+</div>
+<div class="status-card">
+
+    <h2>Account Status</h2>
+
+    <p>🟢 Your account is active.</p>
+
+</div>
+
+<a href="{{ url_for('logout') }}" class="logout">Logout</a>
+
+    </div>
+
+</body>
+
+</html>
